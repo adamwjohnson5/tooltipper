@@ -1,7 +1,7 @@
 /*
 
 Tooltipper v1.0
-Easy tooltips on hover. Compatible with modern browsers only (ES6+).
+Simple tooltips on hover. Compatible with modern browsers only (ES6+).
 https://github.com/adamwjohnson5/tooltipper
 By Adam Johnson
 MIT License 2020
@@ -11,7 +11,7 @@ Usage:
 let ttipr = new Tooltipper(bgColor, txtColor, bdrRadius);
 ttipr.init(); // Initialize all elements with 'data-tooltipper' attribute
 
-ttipr.add(elem); // If element added after initialize
+ttipr.add(elem); // Add element after initialize
 
 */
 "use strict";
