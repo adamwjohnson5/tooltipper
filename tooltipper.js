@@ -55,7 +55,7 @@ class Tooltipper {
                 this.tooltipper.style.top = e.pageY + 'px';
             });
             // Loop all items in DOM with a tooltipper attr
-            const tooltips = document.querySelectorAll('nav a[data-tooltipper]');
+            const tooltips = document.querySelectorAll('a[data-tooltipper]');
             for (let x = 0; x < tooltips.length; x++) {
                 this.add(tooltips[x]);
             }
