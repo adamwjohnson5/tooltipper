@@ -2,7 +2,7 @@
 
 Simple tooltips on hover. Compatible with modern browsers only (ES6+).
 
-<img src="preview.png" width="118" height="31">
+<img src="preview.png" width="120" height="32">
 
 ## Usage
 

@@ -1,6 +1,6 @@
 /*
 
-Tooltipper v1.0
+Tooltipper v1.1
 Simple tooltips on hover. Compatible with modern browsers only (ES6+).
 https://github.com/adamwjohnson5/tooltipper
 By Adam Johnson
@@ -33,8 +33,10 @@ class Tooltipper {
             this.tooltipper.style.display = 'none';
             this.tooltipper.style.margin = '8px';
             this.tooltipper.style.padding = '4px';
+            this.tooltipper.style.paddingLeft = '6px';
+            this.tooltipper.style.paddingRight = '6px';
             this.tooltipper.style.fontSize = '12px';
-            this.tooltipper.style.fontFamily = 'Helvetica Neue, sans-serif';
+            this.tooltipper.style.fontFamily = 'sans-serif';
             this.tooltipper.style.backgroundColor = this.bgColor;
             this.tooltipper.style.color = this.txtColor;
             this.tooltipper.style.borderRadius = this.bdrRadius;
@@ -46,11 +48,11 @@ class Tooltipper {
                 if (e.pageX > i) { // Right side of window
                     this.tooltipper.style.left = 'auto';
                     this.tooltipper.style.right = (windowWidth - e.pageX) + 'px';
-                    this.tooltipper.style.boxShadow = '-1px 1px 3px rgba(0, 0, 0, 0.5)';
+                    this.tooltipper.style.boxShadow = '-1px 1px 3px rgba(0, 0, 0, 0.25)';
                 } else { // Left side of window
                     this.tooltipper.style.right = 'auto';
                     this.tooltipper.style.left = e.pageX + 'px';
-                    this.tooltipper.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.5)';
+                    this.tooltipper.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.25)';
                 }
                 this.tooltipper.style.top = e.pageY + 'px';
             });
