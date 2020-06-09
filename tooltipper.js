@@ -14,10 +14,10 @@ ttipr.init(); // Initialize all elements with 'data-tooltipper' attribute
 ttipr.add(elem); // Add element after initialize
 
 */
+
 "use strict";
 
 class Tooltipper {
-
     constructor(bgColor = '#FFF', txtColor = '#000', bdrRadius = '0px') {
         this.bgColor = bgColor;
         this.txtColor = txtColor;
@@ -41,6 +41,7 @@ class Tooltipper {
             this.tooltipper.style.color = this.txtColor;
             this.tooltipper.style.borderRadius = this.bdrRadius;
             document.querySelector('body').after(this.tooltipper);
+            
             // Mouse move
             window.addEventListener('mousemove', (e) => {
                 const windowWidth = window.innerWidth;
@@ -56,6 +57,7 @@ class Tooltipper {
                 }
                 this.tooltipper.style.top = e.pageY + 'px';
             });
+            
             // Loop all items in DOM with a tooltipper attr
             const tooltips = document.querySelectorAll('a[data-tooltipper]');
             for (let x = 0; x < tooltips.length; x++) {
@@ -74,5 +76,4 @@ class Tooltipper {
             this.tooltipper.style.display = 'none';
         });
     }
-    
 }
