@@ -45,6 +45,7 @@ class Tooltipper {
         window.addEventListener('mousemove', (e) => {
             const windowWidth = window.innerWidth;
             let i = (windowWidth / 2);
+            
             if (e.pageX > i) { // Right side of window
                 this.tooltipper.style.left = 'auto';
                 this.tooltipper.style.right = (windowWidth - e.pageX) + 'px';
@@ -54,11 +55,13 @@ class Tooltipper {
                 this.tooltipper.style.left = e.pageX + 'px';
                 this.tooltipper.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.25)';
             }
+            
             this.tooltipper.style.top = e.pageY + 'px';
         });
 
         // Loop all items in DOM with a tooltipper attr
         const tooltips = document.querySelectorAll('a[data-tooltipper]');
+        
         for (let x = 0; x < tooltips.length; x++) {
             this.add(tooltips[x]);
         }
@@ -70,6 +73,7 @@ class Tooltipper {
             this.tooltipper.textContent = i;
             this.tooltipper.style.display = 'inline';
         });
+        
         item.addEventListener('mouseout', () => {
             this.tooltipper.style.display = 'none';
         });
