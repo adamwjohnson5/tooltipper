@@ -13,4 +13,4 @@ ttipr.init(); // Initialize all elements with 'data-tooltipper' attribute
 ttipr.add(elem); // Add element after initialize
 ```
 
-### [MIT License](https://en.wikipedia.org/wiki/MIT_License) 2019
+### [MIT License](https://en.wikipedia.org/wiki/MIT_License) 2020
