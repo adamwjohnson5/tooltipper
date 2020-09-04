@@ -57,7 +57,7 @@ class Tooltipper {
                 this.tooltip.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.25)';
             }
             
-            this.tooltip.style.top = e.pageY + 'px';
+            this.tooltip.style.top = (e.pageY - window.pageYOffset) + 'px';
         });
 
         // Loop all elems in DOM with a tooltipper attr
