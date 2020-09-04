@@ -61,7 +61,7 @@ class Tooltipper {
         });
 
         // Loop all elems in DOM with a tooltipper attr
-        const tooltips = document.querySelectorAll('a[data-tooltipper]');
+        const tooltips = document.querySelectorAll('[data-tooltipper]');
         
         for (let x = 0; x < tooltips.length; x++) {
             this.add(tooltips[x]);
