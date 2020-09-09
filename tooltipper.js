@@ -1,6 +1,6 @@
 /*
 
-Tooltipper v1.3
+Tooltipper v1.4
 Simple tooltips on hover. Compatible with modern browsers only (ES6+).
 
 https://github.com/adamwjohnson5/tooltipper
@@ -42,6 +42,11 @@ class Tooltipper {
         this.tooltip.style.color = this.txtColor;
         this.tooltip.style.borderRadius = this.bdrRadius;
         document.querySelector('body').after(this.tooltip);
+        
+        // Check for touch device
+        window.addEventListener('touchstart', () => {
+            this.touch = true;
+        });
 
         // Mouse move
         window.addEventListener('mousemove', (e) => {
@@ -70,10 +75,12 @@ class Tooltipper {
     
     add(elem) {
         elem.addEventListener('mouseover', () => {
-            this.tooltip.textContent = elem.getAttribute('data-tooltipper');
-            this.tooltip.style.display = 'inline';
+            if (! this.touch) { // Not touch device
+                this.tooltip.textContent = elem.getAttribute('data-tooltipper');
+                this.tooltip.style.display = 'inline';
+            }
         });
-        
+
         elem.addEventListener('mouseout', () => {
             this.tooltip.style.display = 'none';
         });
