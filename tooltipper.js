@@ -75,7 +75,7 @@ class Tooltipper {
     
     add(elem) {
         elem.addEventListener('mouseover', () => {
-            if (! this.touch) { // Not touch device
+            if (!this.touch) { // Not touch device
                 this.tooltip.textContent = elem.getAttribute('data-tooltipper');
                 this.tooltip.style.display = 'inline';
             }
